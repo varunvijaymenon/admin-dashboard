@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import PermanentDrawerLeft from './components/Sidebar'
+import NavBar from './components/Appbar'
+import TopRow from './components/TopRow'
+import SecondRow from './components/SecondRow'
+import ThirdRow from './components/ThirdRow'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+        <div className="left-container">  
+        <PermanentDrawerLeft/>
+        </div>
+        <div className="right-container">
+          <div className="AppBar">
+            <NavBar/>
+          </div>
+          <div className="main-body">
+            <div className="top-row">
+              <TopRow/>
+            </div>
+            <div className="second-row">
+              <SecondRow/>
+            </div>
+            <div className="third-row">
+              <ThirdRow/>
+            </div>
+          </div>
+        </div>
     </div>
   );
 }
